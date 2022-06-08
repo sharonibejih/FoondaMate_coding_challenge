@@ -20,7 +20,7 @@ In your terminal, and still in <FoondaMate_coding_challenge>, run: `python src/m
 
 ### Use the Program
 To use this function in another python script outside the project (<FoondaMate_coding_challenge>), simply import it: <br>
-`>>> from FoondaMate_coding_challenge.src.main import outcome` <br>
+`>>> from FoondaMate_coding_challenge.src.main import filter` <br>
 `>>> print(filter("Can I share your email"))`
 
 ### Model Source:
