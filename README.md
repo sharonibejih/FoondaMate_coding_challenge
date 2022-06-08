@@ -23,5 +23,5 @@ To use this function in another python script outside the project (<FoondaMate_c
 `>>> from FoondaMate_coding_challenge.src.main import outcome` <br>
 `>>> print(outcome("Can I share your email"))`
 
-## Model Citation:
+## Model Source:
 [shahrukhx01/question-vs-statement-classifier](https://huggingface.co/shahrukhx01/question-vs-statement-classifier?text=what+did+you+eat+in+lunch%3F) on [Hugging Face](https://huggingface.co/).
