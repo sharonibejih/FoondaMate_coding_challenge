@@ -19,9 +19,9 @@ In your terminal, run: `python src/main.py`
 - Ensure the text has participle of 'share' and 'email' otherwise, it will print a different statement. 
 
 ## Use the Program
-To use this function in another python script outside the project (<FoondaMate_coding_challenge>), simply import it. <br>
->>> from FoondaMate_coding_challenge.src.main import outcome
->>> print(outcome("Can I share your email"))
+To use this function in another python script outside the project (<FoondaMate_coding_challenge>), simply import it: <br>
+`>>> from FoondaMate_coding_challenge.src.main import outcome` <br>
+`>>> print(outcome("Can I share your email"))`
 
-## Citation:
-[shahrukhx01/question-vs-statement-classifier](https://huggingface.co/shahrukhx01/question-vs-statement-classifier?text=what+did+you+eat+in+lunch%3F) model on [Hugging Face](https://huggingface.co/).
+## Model Citation:
+[shahrukhx01/question-vs-statement-classifier](https://huggingface.co/shahrukhx01/question-vs-statement-classifier?text=what+did+you+eat+in+lunch%3F) on [Hugging Face](https://huggingface.co/).
