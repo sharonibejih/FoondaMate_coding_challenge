@@ -15,7 +15,7 @@ Emails containing:
 
 ### Run Program
 In your terminal, and still in <FoondaMate_coding_challenge>, run: `python src/main.py`
-- You will be prompted to enter your text.
+- You will be prompted to enter your text. _(Model make take a few seconds to load on the first run.)_
 - Ensure the text has participle of 'share' and 'email' otherwise, it will print a different statement. 
 
 ### Use the Program

@@ -27,7 +27,8 @@ def email_classifier(text):
     LABEL_1 --> sentence is predicted as a question
     """
 
-    # load huggingface transformer question-vs-statement classification model
+    # load question-vs-statement classification model
+    # loading model may take a few seconds on the first run.
     try:
         tokenizer, model = load_pickle("./models/model.shn")
 
@@ -47,6 +48,17 @@ def email_classifier(text):
 
 
 def filter(text):
+    """
+    1. Checks if the email sentence has a stem of "share" and "email"
+    2. Applies the email_classifier function to predict what class the sentence belongs to.
+    
+    Args:
+    Text -> Short email sentence. For example, "Can I share your email"
+
+    Returns:
+    "<tag> Student wants to know if can share", if it is a question and
+    "<tag> Student has shared", if it is a statement.
+    """
 
     # initialize the PorterStemmer class
     ps = PorterStemmer()
