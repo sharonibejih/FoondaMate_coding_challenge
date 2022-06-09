@@ -16,9 +16,9 @@ Emails containing:
 
 ## Approach:
 - Any given sentence is split into words.
-- `[PorterStemmer](https://github.com/sharonibejih/FoondaMate_coding_challenge/blob/master/src/nltk/porter.py)` is used to get the stem of these words.
+- [PorterStemmer](https://github.com/sharonibejih/FoondaMate_coding_challenge/blob/master/src/nltk/porter.py) is used to get the stem of these words.
 - The program checks if "share" and "email" exists in these stems.
-- If it does, the `[model](https://github.com/sharonibejih/FoondaMate_coding_challenge/blob/master/models/model.shn)` is employed to classify the unpunctuated sentence to either a question (investigation) or statement (information). The predicted class determine the tag the sentence will be filtered with.
+- If it does, the [model](https://github.com/sharonibejih/FoondaMate_coding_challenge/blob/master/models/model.shn) is employed to classify the unpunctuated sentence to either a question (investigation) or statement (information). The predicted class determine the tag the sentence will be filtered with.
 - If, however, the statement does not contain "share" or "email", there will be a return statement saying so.
 
 ### Setup:
