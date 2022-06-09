@@ -22,9 +22,10 @@ Emails containing:
 - If, however, the statement does not contain "share" or "email", there will be a return statement saying so.
 
 ### Setup:
+- Install any version of [Python 3.x.x](https://www.python.org/downloads/), if you do not have it and remember to tick `install pip`.
 - Clone this repo
-- Create a virtual environment: `python3 -m venv .project-env`
-- Activate virtual environment: `source .project-env/bin/activate`
+- Create a virtual environment: `python3 -m venv .project-env` 
+- Activate virtual environment: `source .project-env/bin/activate` on macOS OR `source .project-env/scripts/activate` on Windows OS
 - Ensure you are in the project folder (<FoondaMate_coding_challenge>) or `cd` to it and install dependencies: <br>
 `pip install -r requirements.txt`
 
