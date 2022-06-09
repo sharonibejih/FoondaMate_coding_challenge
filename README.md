@@ -32,11 +32,7 @@ Emails containing:
 In your terminal, and still in <FoondaMate_coding_challenge>, run: `python src/main.py`
 - You will be prompted to enter your text. _(Model make take a few seconds to load on the first run.)_
 - Ensure the text has participle of 'share' and 'email' otherwise, it will print a different statement. 
-
-### Use the Program
-To use this function in another python script outside the project (<FoondaMate_coding_challenge>), simply import it: <br>
-`>>> from FoondaMate_coding_challenge.src.main import filter` <br>
-`>>> print(filter("Can I share your email"))`
+<hr>
 
 ### Model Source:
 [shahrukhx01/question-vs-statement-classifier](https://huggingface.co/shahrukhx01/question-vs-statement-classifier?text=what+did+you+eat+in+lunch%3F) on [Hugging Face](https://huggingface.co/).
