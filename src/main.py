@@ -78,7 +78,7 @@ def filter(text):
             return "<tag> Student has shared"
 
     else:
-        return f"'share' and 'email' not found in given sentence: {text}."
+        return f"'share' and 'email' are both not in given sentence: {text}."
 
 
 if __name__ == "__main__":
