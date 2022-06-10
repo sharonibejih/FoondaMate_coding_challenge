@@ -16,15 +16,16 @@ Emails containing:
 
 ## Approach:
 - Any given sentence is split into words.
-- `[PorterStemmer](https://github.com/sharonibejih/FoondaMate_coding_challenge/blob/master/src/nltk/porter.py)` is used to get the stem of these words.
+- [PorterStemmer](https://github.com/sharonibejih/FoondaMate_coding_challenge/blob/master/src/nltk/porter.py) is used to get the stem of these words.
 - The program checks if "share" and "email" exists in these stems.
-- If it does, the `[model](https://github.com/sharonibejih/FoondaMate_coding_challenge/blob/master/models/model.shn)` is employed to classify the unpunctuated sentence to either a question (investigation) or statement (information). The predicted class determine the tag the sentence will be filtered with.
+- If it does, the [model](https://github.com/sharonibejih/FoondaMate_coding_challenge/blob/master/models/model.shn) is employed to classify the unpunctuated sentence to either a question (investigation) or statement (information). The predicted class determine the tag the sentence will be filtered with.
 - If, however, the statement does not contain "share" or "email", there will be a return statement saying so.
 
 ### Setup:
+- Install any version of [Python 3.x.x](https://www.python.org/downloads/), if you do not have it and remember to tick `install pip`.
 - Clone this repo
-- Create a virtual environment: `python3 -m venv .project-env`
-- Activate virtual environment: `source .project-env/bin/activate`
+- Create a virtual environment: `python3 -m venv .project-env` 
+- Activate virtual environment: `source .project-env/bin/activate` on macOS OR `source .project-env/scripts/activate` on Windows OS
 - Ensure you are in the project folder (<FoondaMate_coding_challenge>) or `cd` to it and install dependencies: <br>
 `pip install -r requirements.txt`
 
@@ -32,11 +33,7 @@ Emails containing:
 In your terminal, and still in <FoondaMate_coding_challenge>, run: `python src/main.py`
 - You will be prompted to enter your text. _(Model make take a few seconds to load on the first run.)_
 - Ensure the text has participle of 'share' and 'email' otherwise, it will print a different statement. 
-
-### Use the Program
-To use this function in another python script outside the project (<FoondaMate_coding_challenge>), simply import it: <br>
-`>>> from FoondaMate_coding_challenge.src.main import filter` <br>
-`>>> print(filter("Can I share your email"))`
+<hr>
 
 ### Model Source:
 [shahrukhx01/question-vs-statement-classifier](https://huggingface.co/shahrukhx01/question-vs-statement-classifier?text=what+did+you+eat+in+lunch%3F) on [Hugging Face](https://huggingface.co/).
