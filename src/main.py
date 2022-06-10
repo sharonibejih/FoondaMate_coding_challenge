@@ -1,6 +1,7 @@
 import torch
 from nltk.porter import PorterStemmer
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import re
 import pickle
 
 # # load huggingface transformer question-vs-statement classification model
@@ -62,23 +63,20 @@ def filter(text):
 
     # initialize the PorterStemmer class
     ps = PorterStemmer()
-    stems = []
 
-    # preprocess sentence: split into words and get the stem of each word.
-    for w in text.split():
-        stems.append(ps.stem(w))
+    # preprocess input sentence: split into words using findall.
+    res = re.findall(r'\w+|[^\s\w]+', text)
 
-    # sentence is classified only if "share" and "email" are found in it.
-    if "share" in stems and "email" in stems:
+    if "share" in ps.stem(str(res)) and "email" in ps.stem(str(res)):
         output = email_classifier(text)
         if output == "LABEL_1":
             return "<tag> Student wants to know if can share"
-
+            
         else:
             return "<tag> Student has shared"
 
     else:
-        return f"'share' and 'email' are both not in given sentence: {text}."
+        return f"'share' and 'email' not found in given sentence: {text}."
 
 
 if __name__ == "__main__":
